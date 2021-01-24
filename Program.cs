@@ -37,7 +37,7 @@ namespace CD
 
             return AnalyzeCommand(ParserSts);
         }
-
+        //Определение какая из команд введена
         static bool AnalyzeCommand(string[] currentCommandAttributes)
         {
             if (currentCommandAttributes.Length == 0)
@@ -65,7 +65,7 @@ namespace CD
                     }
             }
         }
-                
+        //Определение какие атрибуты введены        
         static void AnalyzeAttributesCD(string currentAttributes)
         {
 
@@ -80,7 +80,7 @@ namespace CD
                 TakePathFolder(currentAttributes);
             }
         }
-        
+        //Определение введеного пути 
         static void TakePathFolder(string specifiedFolderPath)
         {
             int position = specifiedFolderPath.LastIndexOf('\\');
@@ -100,7 +100,7 @@ namespace CD
                 currentFolderPath = specifiedFolderPath;
             }
         }
-
+        //Чтение и вывод файлов помощи
         static void ReadFileHelpandDisplay(string chosenFile)
         {
             StreamReader sr = new StreamReader(Environment.CurrentDirectory + @"\" + chosenFile);
